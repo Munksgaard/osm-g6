@@ -23,4 +23,174 @@
 
 \section*{Opgave 1} % {{{
 
+Vi har lavet tre betingelsesvariable, som vi antager implementeres ved
+hjælp af køer. Hver af disse betingelsesvariable repræsenterer en kø,
+barber-køen, sidde-køen og stå-køben.
+
+Køerne fungerer altså ved at der bliver waited og
+signaleret for at gå i kø og vække objekter fra køen.
+
+Vi bruger en global tæller til at tælle hvor mange folk der er i sidde
+og stå-køen.
+
+Vi kan desværre ikke teste implementationen for 30 kunder, da den
+statiske lager-allokering bruger for mange pages, og vi har ikke
+implementeret G5. Vores program burde dog virke efter hensigten. Det
+er testet med 20 kunder. Outputtet kan ses nedenfor.
+
+\begin{verbatim}
+Barber #0 looking for new customers
+Barber #0 sleeping
+Barber #1 looking for new customers
+Barber #1 sleeping
+Barber #2 looking for new customers
+Barber #2 sleeping
+Customer #0 arrives
+Customer #0 is being serviced
+Barber #0 got woken up!
+Barber #0 servicing customer #0
+Customer #2 arrives
+Customer #2 is being serviced
+Customer #3 arrives
+Customer #3 takes a seat
+Customer #4 arrives
+Customer #4 takes a seat
+Customer #5 arrives
+Customer #5 takes a seat
+Customer #6 arrives
+Customer #6 takes a seat
+Customer #7 arrives
+Customer #7 takes a seat
+Customer #8 arrives
+Customer #8 takes a seat
+Customer #9 arrives
+Customer #9 takes a seat
+Customer #10 arrives
+Customer #10 takes a seat
+Customer #11 arrives
+Customer #11 takes a seat
+Customer #12 arrives
+Customer #12 takes a seat
+Customer #13 arrives
+Chairs occupied. Customer #13 standing in line
+Customer #14 arrives
+Chairs occupied. Customer #14 standing in line
+Customer #15 arrives
+Chairs occupied. Customer #15 standing in line
+Customer #16 arrives
+Chairs occupied. Customer #16 standing in line
+Customer #17 arrives
+Chairs occupied. Customer #17 standing in line
+Customer #18 arrives
+Barbershop full. Customer #18 leaving
+Customer #19 arrives
+Barbershop full. Customer #19 leaving
+Customer #1 arrives
+Barbershop full. Customer #1 leaving
+Barber #1 got woken up!
+Barber #1 servicing customer #2
+Barber #0 done servicing customer #0
+Barber #0 looking for new customers
+Barber #0 sleeping
+Customer #3 is being serviced
+Customer #13 takes a seat
+Barber #2 got woken up!
+Barber #2 servicing customer #3
+Barber #1 done servicing customer #2
+Barber #1 looking for new customers
+Barber #1 sleeping
+Customer #4 is being serviced
+Customer #14 takes a seat
+Barber #0 got woken up!
+Barber #0 servicing customer #4
+Barber #2 done servicing customer #3
+Barber #2 looking for new customers
+Barber #2 sleeping
+Customer #5 is being serviced
+Customer #15 takes a seat
+Barber #1 got woken up!
+Barber #1 servicing customer #5
+Barber #0 done servicing customer #4
+Barber #0 looking for new customers
+Barber #0 sleeping
+Customer #6 is being serviced
+Barber #2 got woken up!
+Barber #2 servicing customer #6
+Customer #16 is being serviced
+Barber #0 got woken up!
+Barber #0 servicing customer #16
+Barber #1 done servicing customer #5
+Barber #1 looking for new customers
+Barber #1 sleeping
+Customer #7 is being serviced
+Customer #17 takes a seat
+Barber #1 got woken up!
+Barber #1 servicing customer #7
+Barber #2 done servicing customer #6
+Barber #2 looking for new customers
+Barber #2 sleeping
+Customer #8 is being serviced
+Barber #2 got woken up!
+Barber #2 servicing customer #8
+Barber #0 done servicing customer #16
+Barber #0 looking for new customers
+Barber #0 sleeping
+Customer #9 is being serviced
+Barber #0 got woken up!
+Barber #0 servicing customer #9
+Barber #1 done servicing customer #7
+Barber #1 looking for new customers
+Barber #1 sleeping
+Customer #10 is being serviced
+Barber #1 got woken up!
+Barber #1 servicing customer #10
+Barber #2 done servicing customer #8
+Barber #2 looking for new customers
+Barber #2 sleeping
+Customer #11 is being serviced
+Barber #2 got woken up!
+Barber #2 servicing customer #11
+Barber #0 done servicing customer #9
+Barber #0 looking for new customers
+Barber #0 sleeping
+Customer #12 is being serviced
+Barber #0 got woken up!
+Barber #0 servicing customer #12
+Barber #1 done servicing customer #10
+Barber #1 looking for new customers
+Barber #1 sleeping
+Customer #13 is being serviced
+Barber #1 got woken up!
+Barber #1 servicing customer #13
+Barber #2 done servicing customer #11
+Barber #2 looking for new customers
+Barber #2 sleeping
+Customer #14 is being serviced
+Barber #2 got woken up!
+Barber #2 servicing customer #14
+Barber #0 done servicing customer #12
+Barber #0 looking for new customers
+Barber #0 sleeping
+Customer #15 is being serviced
+Barber #0 got woken up!
+Barber #0 servicing customer #15
+Barber #1 done servicing customer #13
+Barber #1 looking for new customers
+Barber #1 sleeping
+Customer #17 is being serviced
+Barber #1 got woken up!
+Barber #1 servicing customer #17
+Barber #2 done servicing customer #14
+Barber #2 looking for new customers
+Barber #2 sleeping
+Barber #0 done servicing customer #15
+Barber #0 looking for new customers
+Barber #0 sleeping
+Barber #1 done servicing customer #17
+Barber #1 looking for new customers
+Barber #1 sleeping
+\end{verbatim}
+
+% }}}
+
 \end{document}
